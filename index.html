@@ -14,21 +14,23 @@
     <hr/>
 
     <p class="para">Cricket now offers customers a new option to finance their devices with a new phone payment plan.
-        Bread Pay is a phone payment plan solution which is now available today. 
+        <strong>Bread Pay</strong> is a phone payment plan solution which is now available today, which makes it easier to buy
+        devices and accessories with affordable payments. To qualify, customers will need a device 
+        purchase of $149.99 or more.
     </p>
 
 
 
-<p class="para-1"> Key things to understand before moving forward with Bread Pay.</p><br>
+<p class="para-2"> Key things to understand before moving forward with Bread Pay.</p><br>
 
 <div class="notes-card">
-        <p>Key Notes</p>
+        <p>FAQ:</p><br>
         <ul>
             <li class="first-list">
                 If a customer is approved for $1500 and spends $1000, can they use the remaining $500? 
             </li>
                 <ul>
-                    <li class="unordered-list">No, each approval is for one transaction; customers must reapply for additional purchases.</li>
+                    <li class="unordered-list">No, each approval is for one transaction; Customers must reapply for additional purchases.</li>
                 </ul>
             <li class="first-list">If a customer is approved for $3000 and spends $1500, are they guaranteed approval for the remaining $1500 on a new application?</li>
                 <ul>
@@ -45,29 +47,32 @@
             </ul>
 </div><br>
 
-<p class="para-1">Customers should contact Bread Financial Services at <a href="tel:+18449927323" class="phone-highlight">1-844-992-7323</a>
+<p class="para-3">Customers should contact Bread Financial Services at <a href="tel:+18449927323" class="phone-highlight">1-844-992-7323</a>
     if they have any questions regarding their loan.</p>
 <br>
 
 
-<div><h3 class="para-2">Device Financing Options:</h3></div>
+<div><h3 class="para-3-1">Device Financing Options:</h3></div><hr class="hr-1">
 
 
     <div class="payment-options">
         <div class="option-card">
-            <h4>Bread Pay</h4>
+            <h4 style="color: #065f46;">Bread Pay</h4>
             <ul>
                 <li>Bread Pay will support Cricket by offering eligible customers Bread Pay Loans, which allows eligible consumers to make their purchases
                     for $0 down and pay off their loans over 24 monthly installments. 
                 </li> 
-                <li>Bread Pay is offered through <a href="https://d.comenity.net/ac/comenitycard/public/home">Comentiy Bank</a>, a tech-forward financial services provider with competitive payment, savings and lending
-                    solutions for customers.
+                <li>Bread Pay is offered through <a href="https://d.comenity.net/ac/comenitycard/public/home">Comenity Bank</a>. 
+                    <ul>
+                        <li>A tech-forward financial services provider with competitive payment, savings and lending
+                    </ul>
                 </li>
+                
                 <li>Enables merchants/retailers to provide an easy way for customers to buy what they want now and pay over time.</li>
             </ul>
         </div>        
         <div class="option-card">
-            <h4>Progessive Leasing</h4>
+            <h4 style="color: #065f46;">Progessive Leasing</h4>
             <ul>
                 <li>Progressive Leasing will continue to be offered as a lease-to-own option for eligible customers to finance their devices.</li>
                 <li>Progressive Leasing allows customers to make low weekly or monthly payments with no credit needed and no long-term commitment.</li>
@@ -82,7 +87,7 @@
 
 
     <div>
-        <h3 class="para-2">Comparison between Bread Pay and Progessive Leasing</h3>
+        <h3 class="para-3-1">Comparison between Bread Pay and Progessive Leasing</h3><br>
 
         <table>
             <tr>
@@ -127,11 +132,16 @@
 
 
 
+
+    <!-- Modal for expanded images -->
+    <div id="imageModal" class="modal" onclick="closeModal()">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
     <div class="images-a">
-        <img src="images/breadpay.png" alt="Bread Pay Logo">
-        <img src="images/progessive-leasing.png" alt="progessive leasing logo">
-
-
+        <img src="images/breadpay.png" alt="Bread Pay Logo" class="expandable-image" onclick="openModal(this)">
+        <img src="images/progessive-leasing.png" alt="progessive leasing logo" class="expandable-image" onclick="openModal(this)">
     </div><br><br>
 
 
@@ -147,11 +157,28 @@
         </ol>
     </div><br><br><br>
 
+
     <script>
+        // Expand/collapse steps
         document.getElementById('toggleSteps').addEventListener('click', function() {
             const container = document.getElementById('stepsContainer');
             container.classList.toggle('steps-hidden');
             container.classList.toggle('steps-visible');
+        });
+
+        // Modal image logic
+        function openModal(imgElement) {
+            const modal = document.getElementById("imageModal");
+            const modalImg = document.getElementById("modalImage");
+            modal.style.display = "block";
+            modalImg.src = imgElement.src;
+        }
+        function closeModal() {
+            document.getElementById("imageModal").style.display = "none";
+        }
+        // Optional: close modal on ESC
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeModal();
         });
     </script>
     
@@ -166,3 +193,4 @@
     
 </body>
 </html>
+
