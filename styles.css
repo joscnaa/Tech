@@ -1,3 +1,56 @@
+  /* Modal to expanded the images on index.html */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.92);
+    cursor: pointer;
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 92vw;
+    max-height: 92vh;
+    margin-top: 50px;
+    border-radius: 18px;
+    box-shadow: 0 12px 40px rgba(2, 6, 23, 0.45);
+    background: #fff;
+    animation: zoom 0.3s ease-in-out;
+}
+
+@keyframes zoom {
+    from {transform: scale(0.1)}
+    to {transform: scale(1)}
+}
+
+.expandable-image {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.expandable-image:hover {
+    transform: scale(1.05);
+}
+
+.close {
+    position: absolute;
+    right: 35px;
+    top: 15px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1100;
+}
+.close:hover {
+    color: #bbb;
+
+    /* General style */
+}
 body {
     max-width: 1200px;
     margin: 0 auto;
@@ -34,21 +87,57 @@ div {
 }
 
 .para {
-    font-size: 20px;
-    font-family: Palatino, URW Palladio L, Serif;
+    font-size: 1.25rem;
+    font-family: 'Segoe UI', 'Inter', Arial, sans-serif;
     text-align: left;
-}
-
-.para-1 {
-    font-size: 20px;
-    font-family: Palatino, URW Palladio L, Serif;
-    text-align: left;
+    background: linear-gradient(90deg, 0%, 100%);
+    padding: 22px 28px;
+    border-radius: 16px;
+    margin: 18px 0 24px 0;
+    color: black;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    line-height: 1.7;
+    transition: box-shadow 0.2s, background 0.2s;
+    font-weight: 5210;
 }
 
 .para-2 {
+   font-size: 1.25rem;
+    font-family: 'Segoe UI', 'Inter', Arial, sans-serif;
+    text-align: left;
+    background: linear-gradient(90deg, 0%, 100%);
+    padding: 2px 28px;
+    border-radius: 16px;
+    margin: 18px 0 2px 0;
+    color: black;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    line-height: 1.7;
+    transition: box-shadow 0.2s, background 0.2s;
+    font-weight: 5210;
+}
+
+
+
+.para-3 {
+    font-size: 20px;
+    font-family: Palatino, URW Palladio L, Serif;
+    margin-top: 10px;
+}
+
+.para-3-1 {
     font-size: 25px;
     font-family: Palatino, URW Palladio L, Serif;
-    color: #065f46;
+    margin-top: 10px;
+    color: #065f46
+}
+
+.hr-1 {
+    border: none;
+    height: 1px;
+    background: #e6edf0;
+    margin: 18px 0 20px;
 }
 
 .unordered-list {
@@ -91,7 +180,7 @@ div {
 ul, ol {
     display: inline-block;
     text-align: left;
-    margin: 0 auto;
+    margin: 0 auto;;
 }
 
 table {
@@ -231,7 +320,6 @@ a {
 
 /* Highlighted phone number */
 .phone-highlight {
-    display: inline-block;
     background: #fff7c2; /* soft yellow */
     color: #081123; /* dark text for contrast */
     padding: 4px 8px;
